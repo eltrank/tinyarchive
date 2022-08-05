@@ -31,3 +31,10 @@ class Photograph(ArchiveDocument):
             Choices.PHOTO_TYPE_CHOICES.items()
         ),  # defining the constant as a dictionary for easy lookup in views.
     )
+
+class Document(ArchiveDocument):
+    # might want to do something to standardize this later so people can't
+    # just enter variant spellings for language names--a preformated list of standard names
+    # and codes?
+    language = models.CharField(max_length=200)
+    transcription = models.TextField(blank=True, null=False)
