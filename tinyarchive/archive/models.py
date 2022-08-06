@@ -22,7 +22,7 @@ class ArchiveDocument(models.Model):
 
 class Photograph(ArchiveDocument):
     creator = models.CharField(max_length = 50, default = 'Lois, Lauren, and Julia')
-    record_type = models.TextField(max_length=100)
+    record_type = models.TextField(max_length=200)
     color = models.TextField(max_length=100)
     medium = models.TextField(max_length=100)
     image_content = models.TextField(max_length=300)
