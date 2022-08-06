@@ -13,7 +13,7 @@ class ArchiveDocument(models.Model):
             return self.id
     objects=InheritanceManager()
     name = models.CharField(max_length=200)
-    creator = models.CharField(max_length = 50)
+    creator = models.CharField(max_length = 50, default = 'Lois, Lauren, and Julia')
     record_type = models.TextField(max_length=100)
     color = models.TextField(max_length=100)
     medium = models.TextField(max_length=100)
