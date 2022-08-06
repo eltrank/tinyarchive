@@ -13,11 +13,13 @@ class ArchiveDocument(models.Model):
             return self.id
     objects=InheritanceManager()
     name = models.CharField(max_length=200)
-    record_type = models.TextField(blank=True, null=False, max_length=100)
-    color = models.TextField(blank=True, null=False, max_length=100)
-    medium = models.TextField(blank=True, null=False, max_length=100)
-    image_content = models.TextField(blank=True, null=False, max_length=100)
-    description = models.TextField(blank=True, null=False, max_length=100)
+    creator = models.CharField(max_length = 50)
+    record_type = models.TextField(max_length=100)
+    color = models.TextField(max_length=100)
+    medium = models.TextField(max_length=100)
+    image_content = models.TextField(max_length=300)
+    language = models.CharField(max_length=200)
+    description = models.TextField(blank=True, null=False, max_length=500)
     photo_image = StdImageField(
         upload_to="photographs/",
         variations={"thumbnail": {"width": 300, "height": 300}},
@@ -36,5 +38,4 @@ class Document(ArchiveDocument):
     # might want to do something to standardize this later so people can't
     # just enter variant spellings for language names--a preformated list of standard names
     # and codes?
-    language = models.CharField(max_length=200)
     transcription = models.TextField(blank=True, null=False)
