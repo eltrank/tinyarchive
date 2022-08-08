@@ -14,6 +14,7 @@ class ArchiveDocument(models.Model):
     objects=InheritanceManager()
     name = models.CharField(max_length=200)
     description = models.TextField(blank=True, null=False, max_length=500)
+    creator = models.CharField(max_length = 50, blank=True, null= False)
     photo_image = StdImageField(
         upload_to="photographs/",
         variations={"thumbnail": {"width": 300, "height": 300}},
@@ -22,12 +23,11 @@ class ArchiveDocument(models.Model):
     )
 
 class Photograph(ArchiveDocument):
-    creator = models.TextField(max_length = 50, blank=True, null= False)
-    record_type = models.TextField(blank = True, null = False, max_length=200)
-    color = models.TextField(blank = True, null = False, max_length=100)
-    medium = models.TextField(blank = True, null = False, max_length=100)
-    image_content = models.TextField(blank = True, null = False, max_length=300)
-    language = models.TextField(blank = True, null = False, max_length=200)
+    record_type = models.CharField(blank = True, null = False, max_length=200)
+    color = models.CharField(blank = True, null = False, max_length=100)
+    medium = models.CharField(blank = True, null = False, max_length=100)
+    image_content = models.CharField(blank = True, null = False, max_length=300)
+    language = models.CharField(blank = True, null = False, max_length=200)
     photo_type = models.CharField(
         max_length=20,
         choices=list(
