@@ -41,6 +41,11 @@ def item_detail(request, item_id):
             "name": archive_item.name,
             "picture": archive_item.photo_image,
             "description": archive_item.description,
+            "creator": archive_item.creator, 
+            "record type": archive_item.record_type, 
+            "medium": archive_item.medium, 
+            "image content": archive_item.image_content, 
+            "language": archive_item.language
         }
         if isinstance(archive_item, Photograph):
             template_to_render = "archive/photo.html"
