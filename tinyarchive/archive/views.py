@@ -42,12 +42,13 @@ def item_detail(request, item_id):
             "picture": archive_item.photo_image,
             "description": archive_item.description,
             "creator": archive_item.creator, 
-            "record type": archive_item.record_type, 
-            "medium": archive_item.medium, 
-            "image content": archive_item.image_content, 
             "language": archive_item.language
         }
         if isinstance(archive_item, Photograph):
+            context["item"]["record_type"] = archive_item.record_type
+            context["item"]["medium"] = archive_item.medium
+            context["item"]["image_content"] = archive_item.image_content
+            context["item"]["color"] = archive_item.color
             template_to_render = "archive/photo.html"
             # Photo type is the user-readable version of the Photo Type, as described in Consts.
             context["item"]["photo_type"] = Choices.PHOTO_TYPE_CHOICES[
