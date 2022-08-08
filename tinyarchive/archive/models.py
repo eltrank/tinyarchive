@@ -21,12 +21,12 @@ class ArchiveDocument(models.Model):
 
 
 class Photograph(ArchiveDocument):
-    creator = models.CharField(max_length = 50, default = 'Lois, Lauren, and Julia')
-    record_type = models.TextField(max_length=200)
-    color = models.TextField(max_length=100)
-    medium = models.TextField(max_length=100)
-    image_content = models.TextField(max_length=300)
-    language = models.CharField(max_length=200)
+    creator = models.TextField(max_length = 50, blank=True, null= False, default = 'Lois, Lauren, and Julia')
+    record_type = models.TextField(blank = True, null = False, max_length=200)
+    color = models.TextField(blank = True, null = False, max_length=100)
+    medium = models.TextField(blank = True, null = False, max_length=100)
+    image_content = models.TextField(blank = True, null = False, max_length=300)
+    language = models.TextField(blank = True, null = False, max_length=200)
     photo_type = models.CharField(
         max_length=20,
         choices=list(
