@@ -7,3 +7,6 @@ def home(request):
 
 def aboutus(request):
     return render(request, "aboutus.html", {})
+
+def workscited(request):
+    return render(request, "workscited.html", {})
