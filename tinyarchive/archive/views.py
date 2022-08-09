@@ -43,7 +43,6 @@ def item_detail(request, item_id):
             "description": archive_item.description,
             "creator": archive_item.creator, 
             "language": archive_item.language,
-            "threed": archive_item.threed
         }
         if isinstance(archive_item, Photograph):
             context["item"]["threed"] = archive_item.threed
