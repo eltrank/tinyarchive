@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class="breadcrumb">
-    <a href="/"> LLJ Library </a>
+<div style= "font-size:120%", class="breadcrumb">
+    <a href="/"> LLJ Library</a> / Exhibit
 </div>
-<div class="page_title">
+</p>
+<div class="page_title", style="font-size: 300%; font-weight: bold; text-align: center">
     Exhibits
 </div>
 <div class="content">
@@ -12,7 +13,7 @@
     <ul>
         {% for exhibit in exhibits %}
         <li>
-            <div class="exhibit"><a href="{{exhibit.id}}">{{exhibit.name}} </a> : {{exhibit.snippet}} </div>
+            <div class="exhibit", style="font-size: 200%"><a href="{{exhibit.id}}">{{exhibit.name}} </a> : {{exhibit.snippet}} </div>
         </li>
         {% endfor %}
     </ul>

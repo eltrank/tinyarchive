@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class="breadcrumb">
-    <a href="/"> LLJ Library </a> / <a href= "/archive"> Archive </a>
+<div style= "font-size:120%", class="breadcrumb">
+    <a href="/"> LLJ Library </a> / <a href= "/archive"> Archive</a> / {{item.name}}
 </div>
-<div class="page_title">
+</p>
+<div class="page_title", style="font-size: 300%; font-weight: bold; text-align: center">
     {{item.name}}
 </div>
 <div class="content">
@@ -13,17 +14,17 @@
     </div>
     <div class="info">
         <ul>
-            <li><p>Creator: {{item.creator}}</p></li>
-            <li><p>Record Type: {{item.record_type}}</p></li>
-            <li><p>Color: {{item.color}}</p></li>
-            <li><p>Medium: {{item.medium}}</p></li>
-            <li><p>Image Content: {{item.image_content}}</p></li>
-            <li><p>Language: {{item.language}}</p></li>
-            <li><p>Description: {{item.description}}</p></li>
+            <li><p style="font-size: 150%">Creator: {{item.creator}}</p></li>
+            <li><p style="font-size: 150%">Record Type: {{item.record_type}}</p></li>
+            <li><p style="font-size: 150%">Color: {{item.color}}</p></li>
+            <li><p style="font-size: 150%">Medium: {{item.medium}}</p></li>
+            <li><p style="font-size: 150%">Image Content: {{item.image_content}}</p></li>
+            <li><p style="font-size: 150%">Language: {{item.language}}</p></li>
+            <li><p style="font-size: 150%">Description: {{item.description}}</p></li>
             {% if item.threed %}
             <div class="sketchfab-embed-wrapper">
                 <iframe title="{{item.name}}" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="{{item.threed}}/embed">  </iframe>
-                <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+                <p style="font-size: 150%; font-weight: normal; margin: 5px; color: #4A4A4A">
                     <a href="{{item.threed}}" target="_blank">{{item.name}} on Sketchfab</a>
                 </p>
             </div>

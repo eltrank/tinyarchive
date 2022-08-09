@@ -1,31 +1,68 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class="breadcrumb">
-    <a href="/"> Tiny Library </a> / <a href="/exhibit"> Exhibits </a>
+<div style= "font-size:120%", class="breadcrumb">
+    <a href="/"> LLJ Library </a> / <a href="/exhibit"> Exhibit</a> / Random Things Around an Asian Home That Just Make Sense
 </div>
-<div class="page_title">
+</p>
+<div class="page_title", style="font-size: 300%; font-weight: bold; text-align: center">
     {{title}}
 </div>
 <div class="content">
     <div class="exhibit_items">
         <ul>
             {% for item in exhibit_items %}
-            <li>
                 <div class="exhibit_item">
                     <ul>
-                        <li><a href="/archive/{{item.id}}"><img src="{% get_media_prefix %}{{item.image}}" /></a></li>
-                        <li><a href="/archive/{{item.id}}">{{item.name}}</a></li>
-                        <li>{{item.description}}</li>
-                    </ul>
+                        <a style="font-size: 150%", href="/archive/{{item.id}}"><img src="{% get_media_prefix %}{{item.image}}" /></a>
+                        <li><a style="font-size: 150%", href="/archive/{{item.id}}">{{item.name}}</a></li>                    </ul>
                 </div>
-            </li>
             {% endfor %}
         </ul>
     </div>
-    <div class="exhibit_text">
-        {{exhibit_text}}
+    <div class="content">
+    <p style="font-size: 150%; font-weight: bold"> NOSTALGIC </p>
     </div>
-</div>
+    </p>
+        (1) Banana Milk Piggy Bank: 🐷🧧    </div>
+    </p>
+	    This piggy bank is in the exact same shape and size as the banana-flavored milk, an infamous childhood drink from South Korea that is also popular among adults. This piggy bank may confuse most people who are not familiar with Banana Milk but to people who grew up drinking Banana Milk, it can strike a feeling of nostalgia when seeing a piggy bank in the shape of their favorite drink.
+    </div>
+    <p style="font-size: 150%; font-weight: bold"> RESOURCEFUL </p>
+    </div>
+    </p>
+    <p style="font-size: 120%">
+    (2) Yogurtland Spoon: 🥄    </div>
+    </p>
+    <p style="font-size: 120%">
+        The Yogurtland Spoon is the perfect encapsulation of the high level of resourcefulness that our immigrant Asian-American families have practiced throughout generations. While most people use the plastic Yogurtland spoon for their yogurt dessert, our Asian parents developed a habit of detecting sturdy one-time use products that can be a potential staple product in the house and washing them and adding them to the household items. This includes other "musts” such as washing and reusing Ziploc bags and take-out containers!
+    </div>
+    </p>
+    <p style="font-size: 150%; font-weight: bold"> MULTIFUNCTIONAL </p>
+    </div>
+    </p>
+    <p style="font-size: 120%">
+    (3) House Slipper: 🩰    </div>
+    </p>
+    <p style="font-size: 120%">
+        There exists a prevalent unspoken no-shoes-in-the-house rule across most Asian cultures: no shoes in the house. Wearing outdoor shoes indoors is almost culturally illegal. The main reason for shoe removal is cleanliness, but it is also a cultural way of showing respect. The ritual of removing one’s shoes before entering a home is symbolic of leaving the world outside and transitioning to the sanctuary of one’s home (Montalvo, et al., 2006). Most Asian families continue the tradition of taking off their outside shoes. Some even change into their indoor shoes, typically accompanied by acupressure massage soles that improve blood circulation. Funny enough, these indoor shoes are not only worn as shoes but also utilized as effective discipline tools, often used by loving parents to stimulate a whooping to create an image of authority in the house.
+    </div>
+    </p>  
+    <p style="font-size: 120%">  
+        (4) Rice Scooper: 🍚    </div>
+    </p>
+    <p style="font-size: 120%">
+        The rice scooper can be easily found in almost any Asian household and it not only gives insight into a heavy part of Asian culture which is food but it is also one of many examples of Asian families’ multifunctional objects. It is a tool that is used on a daily basis, whether it be to serve a bowl of steaming white rice or to give a slap on the wrist with a cautionary “ay-ya!” for parents to express their discontent. 
+    </div>
+    </p>
+    <p style="font-size: 120%">
+        The rice scooper is yet another innocent household item that made its debut as a disciplinary tool for children growing up in Asian families is the rice scooper. It has been shown that Chinese and Chinese American parents appear more authoritarian and report greater approval and use of physical discipline than European Americans. To bring in a social aspect, immigrant Asian American parents may respond with force because they have invested so heavily in their children’s education and school problems represent a threat to the family’s future security (Lau, 2010).
+    </div>
+    </p>    
+    <p style="font-size: 120%">
+        (5) Stool: 🐒
+    </p>
+    <p style="font-size: 120%">
+        Stools are essential in Asian households for we use them in multiple environments such as using them as a go-to preference for sitting, as a tool in the kitchen to help reach higher shelves, or to assist our posture when we are taking a doodoo. In Vietnamese culture, stools are essential in Vietnamese culture/homes! For it is specifically the go-to preference for sitting. This slightly differs from South Koreans’ preference to sit on the bare floor or with a slightly cushy mat. There are discrete differences between Asian cultures like these as much as there are shared customs/habits. </div>
 
-{% endblock %}
+        {% endblock %}

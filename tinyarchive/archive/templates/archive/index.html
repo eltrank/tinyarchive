@@ -1,28 +1,30 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class="breadcrumb">
-    <a href="/"> LLJ Library  </a>
+<div style= "font-size:120%", class="breadcrumb">
+    <a href="/"> LLJ Library</a> / Archive
 </div>
-<div class="page_title">
+</p>
+<div class="page_title", style="font-size: 300%; font-weight: bold; text-align: center">
     The Archive
 </div>
+</p>
 
 
 <div class="content">
     {% if archive_items %}
     <table>
         <thead>
-            <th> Preview </th>
-            <th> Name </th>
-            <th> Description </th>
+            <th style="font-size: 200%"> Preview </th>
+            <th style="font-size: 200%"> Name </th>
+            <th style="font-size: 200%"> Description </th>
         </thead>
         <tbody>
             {% for item in archive_items %}
             <tr>
-                <td><a href="{{item.id}}"><img src="{% get_media_prefix %}{{item.thumbnail}}"></td>
-                <td><a href="{{item.id}}">{{item.name}}</a></td>
-                <td>{{item.description}}</td>
+                <td><a href="{{item.id}}", style="font-size:150%"><img src="{% get_media_prefix %}{{item.thumbnail}}"></td>
+                <td><a href="{{item.id}}", style="font-size:150%">{{item.name}}</a></td>
+                <td style = "font-size: 150%">{{item.description}}</td>
             </tr>
             {% endfor %}
         </tbody>
