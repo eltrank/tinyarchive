@@ -42,9 +42,10 @@ def item_detail(request, item_id):
             "picture": archive_item.photo_image,
             "description": archive_item.description,
             "creator": archive_item.creator, 
-            "language": archive_item.language
+            "language": archive_item.language,
         }
         if isinstance(archive_item, Photograph):
+            context["item"]["threed"] = archive_item.threed
             context["item"]["record_type"] = archive_item.record_type
             context["item"]["medium"] = archive_item.medium
             context["item"]["image_content"] = archive_item.image_content
