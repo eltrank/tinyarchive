@@ -1,0 +1,16 @@
+h1 {
+    color: rgb(126, 123, 223);
+    font-size: 30pt;
+}
+
+p {
+    font-family: monospace;
+    font-size: 15px
+}
+
+body{
+    background-color:lavender;
+    font-family: monospace;
+    padding: 50px;
+}
+
